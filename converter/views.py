@@ -5,6 +5,9 @@ from .utils import convert_number_to_words_util
 from .serializers import NumberSerializer
 from rest_framework.response import Response
 
+def index(request):
+    return render(request, 'index.html')
+
 @api_view(['POST'])
 def convert_number_to_words_view(request):
     if request.method == 'POST':
